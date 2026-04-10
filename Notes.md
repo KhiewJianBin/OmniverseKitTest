@@ -1,7 +1,33 @@
+
 Here is what i did
+
+Research into Omnivere
+
+- Omnivere is a set of APIs provided by nvidia to do simulation, data generation or other type of processing. It uses their own ai/agents/models/llms to do this
+
+- Omniverse Kit is a SDK used to make your own engine, using nvidia's own set of Libraries, focusing on OpenUSD, RTX Renderer, python scripting.
+
+Omniverse Kit Features
+
+1. An already made 3d engine/editor/template to use : "kit-editor"
+    - "kit-editor" allows to create basic primitive meshes,
+    - Standard Editor Panels as other 3D application
+    - PathTracing by default
+2. Extend Editor by creating custom Menu Items "Basic Python Extension"
+3. Extend Editor by creating custom UI Popups "Python UI Extension"
+4. Wireframe view, Debug view (Depth,Bary,Motion Vector,Wireframe,Heatmap   )
+5. Application Streaming.
+    1. Run Base Editor to use RTX GPU,
+    2. Stream to Browser, React+Typescript using Nvidia WebRTC
+6. Allow use of Python pip packages
+
+---
+---
+---
+
 1. Look at Omniverse Kit 
     - Follow [Tutorial] (https://docs.omniverse.nvidia.com/kit/docs/kit-app-template/latest/docs/intro.html)
-2. Looked at "Developer (Omniverse) Blueprints" 
+2. Looked at [Developer (Omniverse) Blueprints](https://developer.nvidia.com/omniverse)
     1. 4 projects are avaiable to download but all but need graphic card with 80+gb vram minimum to run
 3. Try to find Other Sample Kit Projects to take/reuse Extension code
     - Found Issac Sim to most comprehensive example
@@ -22,20 +48,12 @@ Here is what i did
         - Speech transcription
         - "USD Search API", Image to USD Model search in nvidia database to download
 
-Omnivere is a set of APIs provided by nvidia to do simulation, data generation or other type of processing. It uses their own ai/agents/models/llms to do this
-Omniverse Kit is a SDK used to make your own engine, using nvidia's own set of Libraries, focusing on OpenUSD, RTX Renderer, python scripting.
-Omniverse Kit Features
-1. An already made 3d engine/editor/template to use : "kit-editor"
-    - "kit-editor" allows to create basic primitive meshes,
-    - Standard Editor Panels as other 3D application
-    - PathTracing by default
-2. Extend Editor by creating custom Menu Items "Basic Python Extension"
-3. Extend Editor by creating custom UI Popups "Python UI Extension"
-4. Wireframe view, Debug view (Depth,Bary,Motion Vector,Wireframe,Heatmap   )
-5. Application Streaming.
-    1. Run Base Editor to use RTX GPU,
-    2. Stream to Browser, React+Typescript using Nvidia WebRTC
-6. Allow use of Python pip packages
+
+
+
+---
+---
+---
 
 Omniverse Kit Exploration
 1. Import SIT Campus model (just drag drop), internally uses omni.convert.cad to convert to usd format
