@@ -1,11 +1,10 @@
 Here is what i did
 1. Look at Omniverse Kit 
     - Follow [Tutorial] (https://docs.omniverse.nvidia.com/kit/docs/kit-app-template/latest/docs/intro.html)
-
 2. Looked at "Developer (Omniverse) Blueprints" 
     1. 4 projects are avaiable to download but all but need graphic card with 80+gb vram minimum to run
 3. Try to find Other Sample Kit Projects to take/reuse Extension code
-    - Found Iassac Sim to most comprehensive example
+    - Found Issac Sim to most comprehensive example
     - Two Official UI Extension/Tutorial [Editor Lable,Widget (UI Panels + more)](https://github.com/NVIDIA-Omniverse/kit-extension-sample-ui-scene) [UI Reticle (lines on screen)](https://github.com/NVIDIA-Omniverse/kit-extension-sample-reticle)
     - Nothing else
 3. Look at [Issac Sim](https://github.com/isaac-sim/IsaacSim)
@@ -38,12 +37,6 @@ Omniverse Kit Features
     2. Stream to Browser, React+Typescript using Nvidia WebRTC
 6. Allow use of Python pip packages
 
-Create Service -> is creating an api service files, that define the endpoints in the form of pydantic data model 
-An Extension/Service Type Developer can create a Service/Extension
-1. Create a Service from template by running ".\repo.bat template new"
-2. Select Application->Kit Servce->Enter App Name that you want to extend
-3. A Extension folder will be created e.g Source\extension, Edit python script within file to create new apis to do more stuff
-
 Omniverse Kit Exploration
 1. Import SIT Campus model (just drag drop), internally uses omni.convert.cad to convert to usd format
 2. Attempt to add "player" controls
@@ -65,21 +58,29 @@ Omniverse Kit Exploration
     - Documentation on raycast hard to understand
     - Paired with LLM to produce non functioning code.
     - Able to spawn Cube, but could not make raycast to work
-
-
-
-
-
-
-
+5. Tried Web streaming
+    - Kit-Editor Connects to Simple React App that mirrors app
+    - Laggy
 
 Comments:
-1. Many of standard tools needs to be customly made. script
-2. Even Official Extensions, sometimes doesnt work
-3. Path tracing
+1. Omniverse is not a 3d engine/editor
+2. Omniverse kit is an example of a ready made editor/engine created using Omniverse provided library code
+3. Editor is bear bones. Many of standard tools to create a 3D app, game or simulation needs to be customly made
+4. Rendering is hard fix to use Pathtracing RTX, this limits the type of application or use cases that can fit
+5. Currently have limited Extensions & sometimes doesnt work
+
+
+
+
 
 Dev Notes:
 - .kit file is just a manifest containg "extensions" and "depenedency" like a npm package.json file
+
+Create Service -> is creating an api service files, that define the endpoints in the form of pydantic data model 
+An Extension/Service Type Developer can create a Service/Extension
+1. Create a Service from template by running ".\repo.bat template new"
+2. Select Application->Kit Servce->Enter App Name that you want to extend
+3. A Extension folder will be created e.g Source\extension, Edit python script within file to create new apis to do more stuff
 
 Package a fat package (20mins build time)
 1. Package app ".\repo.bat package --name desired_package_name"
@@ -94,12 +95,11 @@ Commands:
  - Run Kit .\_build\windows-x86_64\release\kit\kit.exe
  - Run Kit with extension .\_build\windows-x86_64\release\kit\kit.exe --enable omni.usd
  - Run Kit with exntesion .\_build\windows-x86_64\release\kit\kit.exe --enable omni.kit.mainwindow
- - Create App .\repo.bat template new
+ - Create App or extension .\repo.bat template new
+ - Build App .\repo.bat build
  - Run app .\repo.bat launch
  - List extension .\_build\windows-x86_64\release\kit\kit.exe --list-exts
-
-Explorer application USD Explorer
-    
+ - Run Web Viewer npm run dev
 
 Links: 
 - [Kit Manual](https://docs.omniverse.nvidia.com/kit/docs/kit-manual/latest/guide/kit_exts.html)
